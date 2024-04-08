@@ -1,0 +1,45 @@
+('separator', '$', 0)
+('separator', '$', 1)
+('separator', '$', 2)
+[]
+Token: Identifier Lexeme: a
+<Statement> -> <Assign>
+<Assign> -> <Identifier> = <Expression>
+('identifier', 'a', 3)
+('operator', '=', 3)
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor><Term Prime>
+('identifier', 'b', 3)
+<Term Prime> -> *<Factor><Term Prime> | /<Factor><Term Prime> | Empty
+<Expression Prime> -> +<Term><Expression Prime> | -<Term><Expression Prime> | Empty
+('operator', '+', 3)
+<Term> -> <Factor><Term Prime>
+('identifier', 'c', 3)
+<Term Prime> -> *<Factor><Term Prime> | /<Factor><Term Prime> | Empty
+<Expression Prime> -> +<Term><Expression Prime> | -<Term><Expression Prime> | Empty
+('separator', ';', 3)
+Complete
+('separator', '$', 4)
+PS C:\Users\Vance\OneDrive\Desktop\rat24scompiler-main> python3 compiler.py demo.rat24s
+('separator', '$', 0)
+('separator', '$', 1)
+('separator', '$', 2)
+[]
+Token: Identifier Lexeme: a
+<Statement> -> <Assign>
+<Assign> -> <Identifier> = <Expression>
+('identifier', 'a', 3)
+('operator', '=', 3)
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor><Term Prime>
+('identifier', 'b', 3)
+<Term Prime> -> *<Factor><Term Prime> | /<Factor><Term Prime> | Empty
+<Expression Prime> -> +<Term><Expression Prime> | -<Term><Expression Prime> | Empty
+('operator', '+', 3)
+<Term> -> <Factor><Term Prime>
+('identifier', 'c', 3)
+<Term Prime> -> *<Factor><Term Prime> | /<Factor><Term Prime> | Empty
+<Expression Prime> -> +<Term><Expression Prime> | -<Term><Expression Prime> | Empty
+('separator', ';', 3)
+Complete
+('separator', '$', 4)
